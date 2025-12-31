@@ -287,4 +287,4 @@ async def Automation(command:list[str]):
 
 # main entry point of the program
 if __name__ == '__main__':
-    asyncio.run(Automation(['close whatsapp']))
+    asyncio.run(Automation(['play farebi on youtube']))
