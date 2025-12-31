@@ -8,13 +8,12 @@ from groq import Groq
 import webbrowser
 import re
 import subprocess # import subprocess for interaction with the system
-import requests # import requests to make http request
 import keyboard
-import psutil
+import psutil # provides an easy way to retrieve information about system utilization
 import asyncio
 import os
-from ctypes import POINTER, cast
-from comtypes import CLSCTX_ALL
+from ctypes import POINTER, cast #used to call C functions and use C-compatible data types directly from Python without writing a Python C extension
+from comtypes import CLSCTX_ALL #  for working with COM (Component Object Model) objects on Windows
 from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 
 # load enviornment variables from .env file
@@ -203,8 +202,6 @@ def System(command):
     return True
 
 
-
-
 # asynchronous function to translate and execute user commands
 async def TranslateAndExecute(commands:list[str]):
     funcs = [] # list to store asynchronous tasks
@@ -290,4 +287,4 @@ async def Automation(command:list[str]):
 
 # main entry point of the program
 if __name__ == '__main__':
-    asyncio.run(Automation(['set a reminder og 11 pm']))
+    asyncio.run(Automation(['close whatsapp']))
